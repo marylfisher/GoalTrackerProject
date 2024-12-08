@@ -8,9 +8,7 @@ header,
 footer {
     background: #3A5A40;
     color: #A3B18A;
-    padding: 
     flex-wrap: wrap;
-
 }
 
 header {
@@ -26,17 +24,22 @@ header h1 {
 
 nav ul {
     text-align: right;
-    padding: 10px;
+    text-decoration: none;
 }
 
 
 nav li {
     display: inline-flex;
     text-align: right;
+    padding-right: 10px;
+
 }
 
 nav a {
     color: #A3B18A;
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 20px;
 }
 
 nav a:hover {
