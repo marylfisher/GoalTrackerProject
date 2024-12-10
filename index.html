@@ -9,6 +9,8 @@
     </head>
     
     <header>
+        <div class="header">
+
         <h1>Goal Tracker</h1>
         <nav>
             <ul>
@@ -18,30 +20,44 @@
             </ul>
         </nav>
     </header>
+</div>
 
     <body>
 
         <main>
-            <div>
-                <section class="card">
-                    LOG YOUR 5 BIGGEST GOALS BELOW!
-                </section>
-                <section class="card">
+            <div class="container">
+                <section class="card 
+                ">
+                  LOG YOUR 5 BIGGEST GOALS BELOW
+                </section>        
+                    <section class="card goals-achieved">
                     GOALS ACHIEVED: <span id="goal-tracker"><span id="num-goals-achieved">0</span>/5</span>
                 </section>
             </div>
             <div class="card">
                 <section class="user-inputs">
-                    <input> </input>
-                    <input type="checkbox"> </section>
-                    <input> </input>
-                    <input type="checkbox"> </section>
-                    <input> </input>
-                    <input type="checkbox"> </section>
-                    <input> </input>
-                    <input type="checkbox"> </section>
-                    <input> </input>
-                    <input type="checkbox"> </section>
+                    <div class="input-group">
+                        <input type="text" placeholder="USER INPUT">
+                        <button type="submit">Submit</button>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="USER INPUT">
+                        <button type="submit">Submit</button>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="USER INPUT">
+                        <button type="submit">Submit</button>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="USER INPUT">
+                        <button type="submit">Submit</button>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" placeholder="USER INPUT">
+                        <button type="submit">Submit</button>
+                    </div>
+                </section>
+                   
                 </section>
             </div>
         </main>
