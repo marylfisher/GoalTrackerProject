@@ -1,6 +1,8 @@
 body {
   background-color: #283618;
   font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+
 }
 
 
@@ -18,7 +20,6 @@ margin-bottom: 0%;
  display: flex;
  padding-top: 1px;
  padding-bottom: 2px;
- color: 606c38;
  margin-top: 2px;
  display: flex-end;
  justify-content: end;
@@ -28,6 +29,7 @@ nav li {
   display: inline-flex;
    margin-right: 10px;
    font-size:20px;
+   color: #606c38;
 }
 
 nav a{
@@ -118,6 +120,90 @@ nav a:hover{
   background-color: rgb(237, 237, 174); 
 }
 
+/*Footer*/
+
+.footer-container{
+  width:100%;
+  padding:50px 20px 20px;
+  
+}
+
+.social-icons{
+  display:flex;
+  justify-content: center;
+}
+
+.social-icons a{
+  text-decoration: none;
+  padding:10px;
+  background-color: #faedcd;
+  margin:10px;
+  border-radius: 50%;
+}
+
+/* hover effects*/
+
+.social-icons a:hover{
+
+  background-color:#283618;
+}
+
+.footer-nav{
+
+  margin:30px 0;
+
+}
+.footer-nav ul{
+  display:flex;
+  justify-content:center;
+  list-style: none;
+
+}
+
+.footer-nav ul li a {
+  color:#DDA15E;
+  margin: 20px;
+  text-decoration:none;
+  font-size:1.2em;
+  opacity:0.7s;
+  transition: 0.5s;
+  text-align: center;
+}
+.footer-nav ul li a:hover{
+  opacity: 1;
+  background-color: #2a330f;
+}
+
+.footer-bottom{
+  background-color: #faedcd;
+  padding: 0.5px;
+  padding-right:2px ;
+  text-align: center;
+  margin-right: 1px;
+  margin-top: 90px;
+  border:  #606c38 solid 1px;
+
+}
+.footer-bottom p{
+  color:#DDA15E;
+}
+
+.designer{
+  opacity:0.7;
+  text-transform:uppercase;
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin:0px 5px;
+
+}
+
+
+
+
+
+/*Media Query*/
+
+
 @media screen and (max-width:850px){
 
   header h1{
@@ -154,5 +240,16 @@ nav a:hover{
     right: 5px; 
     padding: 2px;
     font-size: 12px; 
-  }
+
 }
+.footer-nav ul{
+  flex-direction: column;
+}
+.footer-nav ul li {
+width: 100%;
+text-align: center;
+margin: 10px;
+font-size: 13px;
+}  
+
+/*Media Query ends here or enter your code */
