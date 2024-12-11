@@ -91,4 +91,47 @@ function restoreState() {
 // restores checkboxes when page is loaded
 
     restoreState();
- 
+
+
+ // Function to save a single goal to localStorage 
+
+function saveGoal(goal) {
+  const savedGoals = JSON.parse(localStorage.getItem("goals")) || []; 
+  savedGoals.push(goal); // add new goal
+  localStorage.setItem("goals", JSON.stringify(savedGoals)); // save updated goals back to localStorage 
+}
+
+// Function to restore goals 
+
+function restoreGoals() {
+  const savedGoals = JSON.parse(localStorage.getItem("goals")) || []; 
+  const goalTracker = document.getElementById("goal-tracker");
+
+  // update number of goals saved 
+  goalTracker.textContent = `${savedGoals.length}/5`;
+
+  // log the saved goals to the console 
+  console.log(savedGoals);
+}
+
+// event listener for submit 
+
+document.querySelectorAll(".input-group").forEach(form => {
+  form.addEventListener("submit", event => {
+      event.preventDefault();
+
+      // Get the input field and its value 
+
+      const inputField = form.querySelector("input[type='text']");
+      const goal = inputField.value.trim();
+
+      if (goal) {
+          saveGoal(goal); // Save the goal to localStorage 
+          restoreGoals(); // Refresh the goal display 
+          inputField.value = ""; // Clear the input field for new input 
+      }
+  });
+});
+
+// Restore goals and display the count on page load 
+restoreGoals();
