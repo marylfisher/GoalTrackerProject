@@ -34,7 +34,7 @@ function updateTallyAndSave() {
 
     localStorage.setItem('checkboxTally', checkedCount); // saves tally to local storage
 
-    document.getElementById('count').textContent = checkedCount; // Updates the tally display
+   document.getElementById('count').textContent = checkedCount; // Updates the tally display
 }
 // restores tally from localStorage when opening page
 
