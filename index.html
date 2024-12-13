@@ -65,6 +65,30 @@
             </div>
         </main>
 
+        <body>
+            <button data-open-modal>All goals completed</button>
+            
+            <dialog data-modal>
+                <div>Congratulations you completed all of your goals!</div>
+                <button data-close-modal>Close</button>
+            </dialog>
+            
+            <script>
+            const openButton = document.querySelector("[data-open-modal]")
+            const closeButton = document.querySelector("[data-close-modal]")
+            const modal = document.querySelector ("[data-modal]")
+            
+            openButton.addEventListener("click", () => {
+                modal.showModal()
+            })
+            
+            closeButton.addEventListener("click", () => {
+                modal.close()
+            })
+            </script>
+            
+                </body>
+
         <footer>
          <div class=" footer-container">
            
