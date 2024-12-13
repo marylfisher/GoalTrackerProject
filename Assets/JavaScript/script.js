@@ -107,9 +107,6 @@ function restoreGoals() {
   const savedGoals = JSON.parse(localStorage.getItem("goals")) || []; 
   const goalTracker = document.getElementById("goal-tracker");
 
-  // update number of goals saved 
-  goalTracker.textContent = `${savedGoals.length}/5`;
-
   // log the saved goals to the console 
   console.log(savedGoals);
 }
