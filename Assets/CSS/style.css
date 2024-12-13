@@ -1,8 +1,14 @@
+:root {
+  --backgroundColor: #283618;
+  --primaryColor: #9aad5d;
+  --secondayColor: #c89255;
+  --cardBackground: #faedcd;
+}
+
 body {
-  background-color: #283618;
+  background-color: var(--backgroundColor);
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
-
 }
 
 
@@ -11,7 +17,7 @@ display: flex;
 justify-content: center;
 text-align: center;
 flex-wrap: wrap;
-color: #606c38;
+color: var(--primaryColor);
 font-size: 50px;
 margin-bottom: 0%;
 }
@@ -29,19 +35,19 @@ nav li {
   display: inline-flex;
    margin-right: 10px;
    font-size:20px;
-   color: #606c38;
+   color: var(--primaryColor);
 }
 
-nav a{
-  color: #606c38;
+nav a {
+  color: var(--primaryColor);
   text-decoration: none;
 }
 
-nav a:hover{
- color: #dda15e; 
+nav a:hover {
+ color: var(--secondayColor); 
 }
 
-.container{
+.container {
   display:flex;
   justify-content: space-between;
   gap: 40px;
@@ -49,21 +55,21 @@ nav a:hover{
   border-bottom:  2px solid #606c38; 
   margin-bottom: 15px;
 
-
 }
+
 .card {
   padding: 5px; 
   flex: 1;
   margin-block-end: 20px;
-  color: #dda15e;
+  color: var(--secondayColor);
   font-weight: bolder;
   text-align: center;
   font-size: 20px;
+
   border: 2px solid #dda15e;
   background-color: #faedcd;
   flex-wrap: wrap;
-  
-
+ main
 }
 form{
   position:relative
@@ -72,7 +78,6 @@ form{
 /*text type user input */
 
 .user-inputs input {   
-  
   margin-bottom:7px; 
   padding: 10px; 
   box-sizing:border-box;
@@ -80,14 +85,14 @@ form{
   color: black;
   flex-wrap: wrap;
 
-
 }
+
 .user-inputs{
   flex-direction: column;
   flex-wrap: wrap;
 
-  
 }
+
 .input-group{
 
   display:flex;
@@ -100,12 +105,35 @@ form{
   padding:10px;
   padding-right: 90px;
 
+
 }
 
 .user-inputs .input-group{
 
-display: flexbox;
 flex-direction: row;
+
+  box-sizing:border-box;
+}
+
+.input-group button{
+  position: absolute; 
+  right: 40px; 
+  padding: 2px; 
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-bottom: 8px;
+  background-color: var(--cardBackground); 
+  color: rgb(23, 22, 22); 
+  cursor: pointer; 
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+.input-group button:hover {
+  background-color: rgb(237, 237, 174); 
+
 }
 
 /*Footer*/
@@ -113,7 +141,6 @@ flex-direction: row;
 .footer-container{
   width:100%;
   padding:50px 20px 20px;
-  
 }
 
 .social-icons{
@@ -132,24 +159,21 @@ flex-direction: row;
 /* hover effects*/
 
 .social-icons a:hover{
-
-  background-color:#283618;
+  background-color: var(--primaryColor);
 }
 
 .footer-nav{
-
   margin:30px 0;
-
 }
+
 .footer-nav ul{
   display:flex;
   justify-content:center;
   list-style: none;
-
 }
 
 .footer-nav ul li a {
-  color:#DDA15E;
+  color:var(--primaryColor);
   margin: 20px;
   text-decoration:none;
   font-size:1.2em;
@@ -157,23 +181,25 @@ flex-direction: row;
   transition: 0.5s;
   text-align: center;
 }
+
 .footer-nav ul li a:hover{
   opacity: 1;
-  background-color: #2a330f;
+  background-color: var(--backgroundColor);
+  color: var(--secondayColor);
 }
 
 .footer-bottom{
-  background-color: #faedcd;
+  background-color: var(--cardBackground);
   padding: 0.5px;
   padding-right:2px ;
   text-align: center;
   margin-right: 1px;
   margin-top: 90px;
-  border:  #606c38 solid 1px;
-
+  border: solid 1px var(--primaryColor);
 }
+
 .footer-bottom p{
-  color:#DDA15E;
+  color: var(--secondayColor);
 }
 
 .designer{
@@ -182,11 +208,7 @@ flex-direction: row;
   letter-spacing: 1px;
   font-weight: 300;
   margin:0px 5px;
-
 }
-
-
-
 
 
 /*Media Query*/
@@ -198,6 +220,7 @@ flex-direction: row;
    color: antiquewhite;
     font-size:30px;
   }
+
   nav ul {
     flex-wrap: wrap;
   }
@@ -233,6 +256,7 @@ flex-direction: row;
 .footer-nav ul{
   flex-direction: column;
 }
+
 .footer-nav ul li {
 width: 100%;
 text-align: center;
