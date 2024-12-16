@@ -1,4 +1,4 @@
-// CHECKBOX TALLY CODE
+// CHECKBOX TALLY CODE//
 
 
 // checkbox variables
@@ -23,7 +23,7 @@ checkboxes.forEach(checkbox => {
 updateCount()
 
 
-// TALLY LOCAL STORAGE CODE
+// TALLY LOCAL STORAGE CODE//
 
 
 // function to count checked boxes and the tally
@@ -34,7 +34,7 @@ function updateTallyAndSave() {
 
     localStorage.setItem('checkboxTally', checkedCount); // saves tally to local storage
 
-   document.getElementById('count').textContent = checkedCount; // Updates the tally display
+    document.getElementById('count').textContent = checkedCount; // Updates the tally display
 }
 // restores tally from localStorage when opening page
 
@@ -58,10 +58,8 @@ checkboxes.forEach(checkbox => {
 restoreTally();
 
 
-//--------------------------------------------------//
+//CHECKBOX LOCAL STORAGE CODE//
 
-
-//CHECKBOX LOCAL STORAGE CODE
 
 // saveState function
 
@@ -93,42 +91,28 @@ function restoreState() {
     restoreState();
 
 
- // Function to save a single goal to localStorage 
 
-function saveGoal(goal) {
-  const savedGoals = JSON.parse(localStorage.getItem("goals")) || []; 
-  savedGoals.push(goal); // add new goal
-  localStorage.setItem("goals", JSON.stringify(savedGoals)); // save updated goals back to localStorage 
-}
 
-// Function to restore goals 
+    
+// saves input values to localStorage when form is submitted 
 
-function restoreGoals() {
-  const savedGoals = JSON.parse(localStorage.getItem("goals")) || []; 
-  const goalTracker = document.getElementById("goal-tracker");
-
-  // log the saved goals to the console 
-  console.log(savedGoals);
-}
-
-// event listener for submit 
-
-document.querySelectorAll(".input-group").forEach(form => {
-  form.addEventListener("submit", event => {
-      event.preventDefault();
-
-      // Get the input field and its value 
-
-      const inputField = form.querySelector("input[type='text']");
-      const goal = inputField.value.trim();
-
-      if (goal) {
-          saveGoal(goal); // Save the goal to localStorage 
-          restoreGoals(); // Refresh the goal display 
-          inputField.value = ""; // Clear the input field for new input 
+document.querySelectorAll('.input-group').forEach((form, index) => {
+    form.addEventListener('submit', event => {
+      event.preventDefault(); 
+        const inputField = form.querySelector("input[type='text']");
+        const userInput = inputField.value.trim();
+      if (userInput) {
+        localStorage.setItem(`goalInput${index + 1}`, userInput); // saves value to local storage with unique index key
       }
+    });
   });
-});
-
-// Restore goals and display the count on page load 
-restoreGoals();
+  
+  // restores the input boxes with saved values when page loads
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.input-group input[type="text"]').forEach((inputField, index) => {
+      const savedValue = localStorage.getItem(`goalInput${index + 1}`);
+      if (savedValue) {
+        inputField.value = savedValue; // sets input value to the saved value
+      }
+    });
+  });
