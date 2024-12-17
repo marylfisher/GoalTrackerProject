@@ -21,7 +21,7 @@ THEN goals working on and goals completed number are saved
 
 ## MOCK UP
 
-//TODO ADD wire frame mock up
+![GoalTrackerProject](Assets/images/goal%20tracker%20wire%20frame%20NEW%20(1).jpg)
 
 ## Requirements
 
