@@ -3,6 +3,8 @@
   --primaryColor: #9aad5d;
   --secondayColor: #c89255;
   --cardBackground: #faedcd;
+  --primaryBorder: #606c38;
+  --cardBorder: #dda15e;
 }
 
 body {
@@ -52,7 +54,7 @@ nav a:hover {
   justify-content: space-between;
   gap: 40px;
   margin-top: 15px; 
-  border-bottom:  2px solid #606c38; 
+  border-bottom:  2px solid (var(--primaryBorder)); 
   margin-bottom: 15px;
 }
 
@@ -64,8 +66,8 @@ nav a:hover {
   font-weight: bolder;
   text-align: center;
   font-size: 20px;
-  border: 2px solid #dda15e;
-  background-color: #faedcd;
+  border: 2px solid var(--cardBorder);
+  background-color: var(--cardBackground);
   flex-wrap: wrap;
 }
 
@@ -147,7 +149,7 @@ form {
 .social-icons a{
   text-decoration: none;
   padding:10px;
-  background-color: #faedcd;
+  background-color: var(--cardBackground);
   margin:10px;
   border-radius: 50%;
 }
@@ -164,16 +166,16 @@ form {
 
 .footer-nav ul {
   display:flex;
-  justify-content:center;
+  justify-content: center;
   list-style: none;
 }
 
 .footer-nav ul li a {
   color:var(--primaryColor);
   margin: 20px;
-  text-decoration:none;
-  font-size:1.2em;
-  opacity:0.7s;
+  text-decoration: none;
+  font-size: 1.2em;
+  opacity: 0.7s;
   transition: 0.5s;
   text-align: center;
 }
@@ -200,7 +202,7 @@ form {
 
 .designer {
   opacity:0.7;
-  text-transform:uppercase;
+  text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 300;
   margin:0px 5px;
